@@ -12,7 +12,7 @@ body {
 #ctnGeneral {
     display: grid;
     grid-template-columns: 145px 550px 530px 550px 145px;
-    grid-template-rows: 200px 300px 110px 150px 280px;
+    grid-template-rows: 90px 300px 110px 150px 280px;
 }
 
 #titleCtn {
@@ -22,7 +22,7 @@ body {
     height: auto;
     background-color: #F08200;
     border-radius: 100px;
-    border: 5px white solid;
+    border: 5px #0D24AA solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +32,7 @@ body {
     font-family: "PacFont";
     font-size: 12em;
     color: #FCCF00;
+    font-weight: bold;
 }
 
 #playCtn {
@@ -39,7 +40,7 @@ body {
     grid-row: 4/5;
     width: auto;
     height: auto;
-    background-color: white;
+    background-color: #0D24AA;
     border-radius: 100px;
     display: flex;
     align-items: center;
@@ -51,13 +52,12 @@ body {
     font-size: 5em;
 }
 
-
-.table{
+.table {
     font-family: "PacFont";
     font-size: 1.2em;
-    color: white ;
-    
+    color: white;
 }
+
 #titlepage {
     justify-content: center;
     font-size: xx-small;
@@ -65,13 +65,15 @@ body {
     align-items: center;
     color: white;
 }
- .fa-question{
-     color: white;
- }
 
-a :hover{
+.fa-question {
     color: white;
 }
+
+a :hover {
+    color: white;
+}
+
 #titlehelp {
     font-family: "PacFont";
     justify-content: center;
@@ -79,4 +81,41 @@ a :hover{
     display: flex;
     align-items: center;
     color: #FCCF00;
+    text-decoration: none;
+    color: #FCCF00;
+    font-weight: bold;
+}
+
+#playText:hover {
+    color: white;
+}
+
+@media (max-width: 480px) {
+    #ctnGeneral {
+        display: grid;
+        grid-template-columns: 22px 81px 274px 81px 22px;
+        grid-template-rows: 250px 150px 55px 55px 260px;
+    }
+    #titleCtn {
+        grid-column: 2/5;
+        grid-row: 2/3;
+        width: auto;
+        height: auto;
+    }
+    #title {
+        font-size: 3.5em;
+    }
+    #playCtn {
+        grid-column: 3/4;
+        grid-row: 4/5;
+        width: auto;
+        height: auto;
+    }
+    #playText {
+        font-family: "PacFont";
+        font-size: 2em;
+        text-decoration: none;
+        color: #FCCF00;
+        font-weight: bold;
+    }
 }
