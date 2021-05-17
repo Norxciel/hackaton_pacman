@@ -23,7 +23,7 @@ body {
     height: auto;
     background-color: black;
     border-radius: 100px;
-    border: 5px white solid;
+    border: 5px #0D24AA solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,6 +68,8 @@ body {
 .scoreTitle {
     font-family: "PacFont";
     margin-right: 150px;
+    font-size: 2em;
+    color: white;
 }
 
 #titlepage {
@@ -78,29 +80,18 @@ body {
     color: white;
 }
 
-.fa-question {
+.fa-question-circle {
     color: white;
     cursor: pointer;
+    font-size: 2em;
 }
 
-.fa-question:hover {
+.fa-question-circle:hover {
     color: #0D24AA
 }
 
 a :hover {
     color: white;
-}
-
-#titlehelp {
-    font-family: "PacFont";
-    justify-content: center;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    color: #FCCF00;
-    text-decoration: none;
-    color: #FCCF00;
-    font-weight: bold;
 }
 
 
