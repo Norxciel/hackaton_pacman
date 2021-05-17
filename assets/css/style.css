@@ -81,7 +81,9 @@ body {
 }
 
 #score {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FCCF00;
+    font-weight: bold;
 }
 
 #titlepage {
