@@ -43,10 +43,36 @@
 }
 
 .pac-man {
+<<<<<<< HEAD
     background-color: yellow;
     border-radius: 10px;
 }
 
+=======
+    background-image: url("../img/pacman.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+}
+.pac-manL {
+    background-image: url("../img/pacL.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+}
+.pac-manB {
+    background-image: url("../img/pacB.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+}
+.pac-manH {
+    background-image: url("../img/pacH.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+}
+>>>>>>> pacman_translate
 .scared-ghost {
     background-color: aquamarine;
 }
