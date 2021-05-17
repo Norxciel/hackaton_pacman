@@ -37,6 +37,13 @@ body {
     font-weight: bold;
 }
 
+#titleIndex {
+    font-family: "PacFont";
+    font-size: 12em;
+    color: #FCCF00;
+    font-weight: bold;
+}
+
 #playCtn {
     grid-column: 3/4;
     grid-row: 4/5;
