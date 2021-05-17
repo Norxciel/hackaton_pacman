@@ -50,3 +50,33 @@ body {
     font-family: "PacFont";
     font-size: 5em;
 }
+
+
+.table{
+    font-family: "PacFont";
+    font-size: 1.2em;
+    color: white ;
+    
+}
+#titlepage {
+    justify-content: center;
+    font-size: xx-small;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+ .fa-question{
+     color: white;
+ }
+
+a :hover{
+    color: white;
+}
+#titlehelp {
+    font-family: "PacFont";
+    justify-content: center;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: #FCCF00;
+}
