@@ -4,6 +4,7 @@
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0%;
     padding: 0%;
     background-color: black;
@@ -20,9 +21,9 @@ body {
     grid-row: 2/3;
     width: auto;
     height: auto;
-    background-color: #F08200;
+    background-color: black;
     border-radius: 100px;
-    border: 5px #0D24AA solid;
+    border: 5px white solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,12 +51,23 @@ body {
 #playText {
     font-family: "PacFont";
     font-size: 5em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#playText:hover {
+    color: #FCCF00;
 }
 
 .table {
-    font-family: "PacFont";
     font-size: 1.2em;
     color: white;
+}
+
+.scoreTitle {
+    font-family: "PacFont";
+    margin-right: 150px;
 }
 
 #titlepage {
@@ -68,6 +80,11 @@ body {
 
 .fa-question {
     color: white;
+    cursor: pointer;
+}
+
+.fa-question:hover {
+    color: #0D24AA
 }
 
 a :hover {
@@ -86,8 +103,11 @@ a :hover {
     font-weight: bold;
 }
 
-#playText:hover {
-    color: white;
+
+/* MODAL */
+
+#exampleModalLabel {
+    color: #FCCF00;
 }
 
 @media (max-width: 480px) {
@@ -110,6 +130,7 @@ a :hover {
         grid-row: 4/5;
         width: auto;
         height: auto;
+        text-decoration: none;
     }
     #playText {
         font-family: "PacFont";
