@@ -37,19 +37,35 @@
 }
 
 .pinky {
-    background-color: pink;
+    background-image: url("../img/ghostPinkRight.png");
+    background-size: contain;
+    background-color: black;
+    border: 0;
+    border-radius: 0%;
 }
 
 .inky {
-    background-color: cyan;
+    background-image: url("../img/ghostblue.png");
+    background-size: contain;
+    background-color: black;
+    border: 0;
+    border-radius: 0%;
 }
 
 .clyde {
-    background-color: orange;     
+    background-image: url("../img/ghostYellowRight.png");
+    background-size: contain;
+    background-color: black;
+    border: 0;
+    border-radius: 0%;   
 }
 
 .scared-ghost {
-    background-color: aquamarine;
+    background-image: url("../img/ghostScared.png");
+    background-size: contain;
+    background-color: black;
+    border: 0;
+    border-radius: 0%;   
 }
 
 

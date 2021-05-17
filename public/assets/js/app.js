@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         1,0,1,1,1,1,0,1,1,1,1,1,0,1,1,0,1,1,1,1,1,0,1,1,1,0,1,1,
         1,0,1,1,1,1,0,1,1,1,1,1,0,1,1,0,1,1,1,1,1,0,1,1,1,0,1,1,
         1,0,1,1,1,1,0,1,1,1,1,1,0,1,1,0,1,1,1,1,1,0,1,1,1,0,1,1,
-        0,0,0,0,0,3,0,0,0,4,4,4,4,4,4,4,4,4,4,0,0,0,0,0,0,3,0,0,
+        1,0,0,0,0,3,0,0,0,4,4,4,4,4,4,4,4,4,4,0,0,0,0,0,0,3,0,1,
         1,0,1,1,1,1,0,1,1,4,4,4,4,4,4,4,4,4,4,1,1,0,1,1,1,1,0,1,
         1,0,1,1,1,1,0,1,1,4,4,4,4,4,4,4,4,4,4,1,1,0,1,1,1,1,0,1,
         1,0,1,1,1,1,0,1,1,4,1,1,1,1,1,1,1,1,4,1,1,0,1,1,1,1,0,1,
@@ -92,9 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
           !squares[pacmanCurrentIndex -1].classList.contains('ghost-lair')
           )
         pacmanCurrentIndex -= 1
-        if (squares[pacmanCurrentIndex -1] === squares[363]) {
-          pacmanCurrentIndex = 391
-        }
         squares[pacmanCurrentIndex].classList.add('pac-manL')
             break
         case 38:
@@ -121,9 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
             !squares[pacmanCurrentIndex +1].classList.contains('ghost-lair')
           )
           pacmanCurrentIndex += 1
-          if (squares[pacmanCurrentIndex +1] === squares[392]) {
-            pacmanCurrentIndex = 364
-          }
           squares[pacmanCurrentIndex].classList.add('pac-man')
           break
         case 40:
@@ -246,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     //check for a win - more is when this score is reached
     function checkForWin() {
-      if (score === 2700) {
+      if (score >= 2700) {
         ghosts.forEach(ghost => clearInterval(ghost.timerId))
         document.removeEventListener('keyup', movePacman)
         setTimeout(function(){ alert("You have WON!"); }, 500)
