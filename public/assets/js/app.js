@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     createBoard()
   
+    function moveLeft () {
+      
+    }
   
     //create Characters
     //draw pacman onto the board
@@ -78,21 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       switch(e.keyCode) {
         case 37:
-        squares[pacmanCurrentIndex].classList.remove('pac-man')
-        squares[pacmanCurrentIndex].classList.remove('pac-manL')
-        squares[pacmanCurrentIndex].classList.remove('pac-manB')
-        squares[pacmanCurrentIndex].classList.remove('pac-manH')
-          if(
-            pacmanCurrentIndex % width !== 0 &&
-            !squares[pacmanCurrentIndex -1].classList.contains('wall') &&
-            !squares[pacmanCurrentIndex -1].classList.contains('ghost-lair')
-            )
-          pacmanCurrentIndex -= 1
-          if (squares[pacmanCurrentIndex -1] === squares[363]) {
-            pacmanCurrentIndex = 391
-          }
-          squares[pacmanCurrentIndex].classList.add('pac-manL')
-          break
+
+     squares[pacmanCurrentIndex].classList.remove('pac-man')
+      squares[pacmanCurrentIndex].classList.remove('pac-manL')
+      squares[pacmanCurrentIndex].classList.remove('pac-manB')
+      squares[pacmanCurrentIndex].classList.remove('pac-manH')
+        if(
+          pacmanCurrentIndex % width !== 0 &&
+          !squares[pacmanCurrentIndex -1].classList.contains('wall') &&
+          !squares[pacmanCurrentIndex -1].classList.contains('ghost-lair')
+          )
+        pacmanCurrentIndex -= 1
+        if (squares[pacmanCurrentIndex -1] === squares[363]) {
+          pacmanCurrentIndex = 391
+        }
+        squares[pacmanCurrentIndex].classList.add('pac-manL')
+            break
         case 38:
             squares[pacmanCurrentIndex].classList.remove('pac-man')
             squares[pacmanCurrentIndex].classList.remove('pac-manL')
@@ -242,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     //check for a win - more is when this score is reached
     function checkForWin() {
-      if (score === 274) {
+      if (score === 2700) {
         ghosts.forEach(ghost => clearInterval(ghost.timerId))
         document.removeEventListener('keyup', movePacman)
         setTimeout(function(){ alert("You have WON!"); }, 500)
