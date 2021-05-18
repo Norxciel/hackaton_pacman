@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //bouger pacman
     function movePacman(e) {
-
+        
         switch (e.keyCode) {
             case 37:
 
@@ -118,14 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares[pacmanCurrentIndex].classList.add('pac-man')
                 break
             case 40:
+                
                 squares[pacmanCurrentIndex].classList.remove('pac-man')
                 squares[pacmanCurrentIndex].classList.remove('pac-manL')
                 squares[pacmanCurrentIndex].classList.remove('pac-manB')
                 squares[pacmanCurrentIndex].classList.remove('pac-manH')
                 if (
+                    
                     pacmanCurrentIndex + width < width * width &&
                     !squares[pacmanCurrentIndex + width].classList.contains('wall') &&
                     !squares[pacmanCurrentIndex + width].classList.contains('ghost-lair')
+                    
                 )
                     pacmanCurrentIndex += width
                 squares[pacmanCurrentIndex].classList.add('pac-manB')
@@ -135,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         powerPelletEaten()
         checkForGameOver()
         checkForWin()
+        
     }
 
     document.addEventListener('keyup', movePacman)
@@ -148,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             squares[pacmanCurrentIndex].classList.remove('pac-dot')
         }
     }
+
 
     //Mange un palet
     function powerPelletEaten() {
@@ -172,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.speed = speed
             this.currentIndex = startIndex
             this.isScared = false
-            this.timerId = NaN
+            this.timerId = 0
         }
     }
 
@@ -197,6 +202,14 @@ document.addEventListener('DOMContentLoaded', () => {
         let direction = directions[Math.floor(Math.random() * directions.length)]
         
         ghost.timerId = setInterval(function() {
+            //si le pacman peut manger le fantome 
+            if (ghost.isScared && squares[ghost.currentIndex].classList.contains('pac-man')) {
+                eatGhost.play()
+                squares[ghost.currentIndex].classList.remove(ghost.className, 'ghost', 'scared-ghost')
+                ghost.currentIndex = ghost.startIndex
+                score += 100
+                squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
+            }
             if(squares[ghost.currentIndex].classList.contains('croisement')) {
                 direction = directions[Math.floor(Math.random() * directions.length)]
             }
@@ -219,14 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 intermission.play()
             }
 
-            //si le pacman peut manger le fantome 
-            if (ghost.isScared && squares[ghost.currentIndex].classList.contains('pac-man')) {
-                eatGhost.play()
-                squares[ghost.currentIndex].classList.remove(ghost.className, 'ghost', 'scared-ghost')
-                ghost.currentIndex = ghost.startIndex
-                score += 100
-                squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
-            }
+
             checkForGameOver()
         }, ghost.speed)
     }
