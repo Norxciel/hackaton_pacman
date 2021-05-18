@@ -30,6 +30,14 @@ body {
 }
 
 #title {
+    margin-top: 50px;
+    font-family: "PacFont";
+    font-size: 12em;
+    color: #FCCF00;
+    font-weight: bold;
+}
+
+#titleIndex {
     font-family: "PacFont";
     font-size: 12em;
     color: #FCCF00;
@@ -71,9 +79,13 @@ body {
     font-size: 2em;
     color: white;
 }
-#score{
-    font-family: Arial, Helvetica, sans-serif;
+
+#score {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FCCF00;
+    font-weight: bold;
 }
+
 #titlepage {
     justify-content: center;
     font-size: xx-small;
@@ -142,14 +154,14 @@ a :hover {
     border: solid black;
     background-color: black;
 }
-  
+
 .gridG div {
     width: 20px;
     height: 20px;
 }
 
 .pac-dot {
-    background-color: yellow;   
+    background-color: yellow;
     border: 5px solid black;
     border-radius: 50%;
     box-sizing: border-box;
@@ -193,7 +205,7 @@ a :hover {
     background-size: contain;
     background-color: black;
     border: 0;
-    border-radius: 0%;   
+    border-radius: 0%;
 }
 
 .scared-ghost {
@@ -201,9 +213,8 @@ a :hover {
     background-size: contain;
     background-color: black;
     border: 0;
-    border-radius: 0%;   
+    border-radius: 0%;
 }
-
 
 .pac-man {
     background-image: url("../img/pacman.png");
@@ -211,18 +222,21 @@ a :hover {
     background-size: contain;
     border-radius: 10px;
 }
+
 .pac-manL {
     background-image: url("../img/pacL.png");
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 10px;
 }
+
 .pac-manB {
     background-image: url("../img/pacB.png");
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 10px;
 }
+
 .pac-manH {
     background-image: url("../img/pacH.png");
     background-repeat: no-repeat;
@@ -230,7 +244,7 @@ a :hover {
     border-radius: 10px;
 }
 
-.gameDisplay{
+.gameDisplay {
     width: 100%;
     height: 700px;
     display: flex;
