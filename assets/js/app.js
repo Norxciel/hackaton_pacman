@@ -242,7 +242,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (score === 2680) {
             ghosts.forEach(ghost => clearInterval(ghost.timerId))
             document.removeEventListener('keyup', movePacman)
-            setTimeout(function() { alert("Bravo vous avez gagné !"); }, 500)
+            setTimeout(function() {
+                swal({
+                    title: "Gagné !",
+                    icon: "success",
+                })
+            }, 500)
         }
     }
 })
