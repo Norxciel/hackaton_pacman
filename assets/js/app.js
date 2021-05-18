@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Mange un palet
     function powerPelletEaten() {
         if (squares[pacmanCurrentIndex].classList.contains('power-pellet')) {
-            score += 10
+            score += 50
             ghosts.forEach(ghost => ghost.isScared = true)
             setTimeout(unScareGhosts, 10000)
             squares[pacmanCurrentIndex].classList.remove('power-pellet')
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //verif de victoire
     function checkForWin() {
-        if (score === 2760) {
+        if (score === 2800) {
             ghosts.forEach(ghost => clearInterval(ghost.timerId))
             document.removeEventListener('keyup', movePacman)
             setTimeout(function() {
