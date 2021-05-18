@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1 - Mur
         // 3 - palet fruit 
         // 4 - Case vide
-
+    
     const squares = []
-    startGame.play()
+    
         //création de tableau
     function createBoard() {
         for (let i = 0; i < layout.length; i++) {
@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares[i].classList.add('power-pellet')
             }
         }
+        startGame.play()
     }
     createBoard()
 
