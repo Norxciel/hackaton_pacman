@@ -7,38 +7,39 @@ document.addEventListener('DOMContentLoaded', () => {
         // Map
     const layout = [
             1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-            1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+            1, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
             1, 3, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 3, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
-            1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+            1, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 5, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
-            1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+            1, 5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 1, 1, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 5, 0, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1,
-            1, 0, 0, 0, 0, 3, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 3, 0, 1,
+            1, 5, 0, 0, 0, 3, 5, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 5, 0, 0, 0, 5, 0, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 0, 1, 1, 1, 1, 0, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 0, 1, 1, 1, 1, 0, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 0, 1, 1, 1, 1, 0, 1,
-            1, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+            1, 5, 0, 0, 0, 0, 5, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 5, 0, 0, 0, 0, 0, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
             1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1,
-            1, 3, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 3, 1,
+            1, 3, 0, 0, 1, 1, 5, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 5, 1, 1, 0, 0, 3, 1,
             1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1,
             1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1,
-            1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1,
+            1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 5, 0, 0, 1,
             1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
             1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1,
-            1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+            1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
             1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
         ]
         // 0 - bonbon
         // 1 - Mur
         // 3 - palet fruit 
         // 4 - Case vide
+        // 5 - Croisement
     
     const squares = []
     
@@ -58,6 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares[i].classList.add('ghost-lair')
             } else if (layout[i] === 3) {
                 squares[i].classList.add('power-pellet')
+            }else if (layout[i] === 5) {
+                squares[i].classList.add('pac-dot')
+                squares[i].classList.add('croisement')
             }
         }
         startGame.play()
@@ -154,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             squares[pacmanCurrentIndex].classList.remove('power-pellet')
         }
     }
-
+    
     //arrêter de clignoter (fantôme)
     function unScareGhosts() {
         ghosts.forEach(ghost => ghost.isScared = false)
@@ -191,10 +195,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function moveGhost(ghost) {
         const directions = [-1, +1, width, -width]
         let direction = directions[Math.floor(Math.random() * directions.length)]
-
+        
         ghost.timerId = setInterval(function() {
+            if(squares[ghost.currentIndex].classList.contains('croisement')) {
+                direction = directions[Math.floor(Math.random() * directions.length)]
+            }
             if (!squares[ghost.currentIndex + direction].classList.contains('ghost') &&
                 !squares[ghost.currentIndex + direction].classList.contains('wall')) {
+                
                 //supp les classes des fantômes 
                 squares[ghost.currentIndex].classList.remove(ghost.className)
                 squares[ghost.currentIndex].classList.remove('ghost', 'scared-ghost')
@@ -203,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
                     //sinon trouver une nouvelle direction random
             } else direction = directions[Math.floor(Math.random() * directions.length)]
+
 
             //si le fantôme est effrayé
             if (ghost.isScared) {
