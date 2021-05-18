@@ -251,3 +251,25 @@ a :hover {
     justify-content: center;
     align-items: center;
 }
+
+.swal-modal {
+    background-color: black;
+    border: 3px solid white;
+}
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #0D24AA;
+    font-size: 12px;
+    border: 1px solid #FCCF00;
+    text-align: center;
+}
+
+.swal-title {
+    margin: 0px;
+    font-size: 30px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+    margin-bottom: 28px;
+    color: white;
+}
