@@ -239,15 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //verif de victoire
     function checkForWin() {
-        if (score >= 2700) {
+        if (score === 2680) {
             ghosts.forEach(ghost => clearInterval(ghost.timerId))
             document.removeEventListener('keyup', movePacman)
-            setTimeout(function() {
-                swal({
-                    title: "Gagné!",
-                    icon: "success",
-                });
-            }, 500)
+            setTimeout(function() { alert("Bravo vous avez gagné !"); }, 500)
         }
     }
 })
