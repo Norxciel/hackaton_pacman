@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const scoreDisplay = document.getElementById('score')
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1 - Mur
     // 3 - palet fruit 
     // 4 - Case vide
-  
+    
     const squares = []
     startGame.play()
     //création de tableau
@@ -237,10 +238,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
     //verif de victoire
     function checkForWin() {
-      if (score >= 2700) {
+      if (score === 2680) {
         ghosts.forEach(ghost => clearInterval(ghost.timerId))
         document.removeEventListener('keyup', movePacman)
-        setTimeout(function(){ alert("C'est pas bien de smurf!"); }, 500)
+        setTimeout(function(){ alert("Bravo vous avez gagné !"); }, 500)
       }
     }
   })
