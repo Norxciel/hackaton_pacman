@@ -174,10 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //tous les fantômes 
     ghosts = [
-        new Ghost('blinky', 376, 250),
-        new Ghost('pinky', 376, 400),
+        new Ghost('blinky', 29, 250),
+        new Ghost('pinky', 54, 400),
         new Ghost('inky', 351, 300),
-        new Ghost('clyde', 379, 500)
+        new Ghost('clyde', 754, 500)
     ]
 
     ghosts.forEach(ghost => {
