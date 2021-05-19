@@ -2,50 +2,57 @@
     font-family: "PacFont";
     src: url("../fonts/PAC-FONT.TTF");
 }
-*, ::after, ::before{
+
+*,
+ ::after,
+ ::before {
     box-sizing: unset;
 }
 
-body,html {
-    
+body,
+html {
     margin: 0;
     padding: 0;
     background-color: black;
     height: 100vh;
     width: 100vw;
-    
 }
-#ctnTitle{
+
+#ctnTitle {
     border: 5px solid #0D24AA;
     border-radius: 50px;
     padding: 20px 50px;
 }
-h1{
+
+h1 {
     font-family: "PacFont";
     color: #FCCF00;
     font-weight: bold;
     font-size: 4.5rem;
 }
 
-#playBtn{
+#playBtn {
     background-color: #0D24AA;
     border-radius: 10px;
     padding: 15px;
     text-align: center;
 }
-#playBtn:hover{
+
+#playBtn:hover {
     background-color: #0D24AA;
 }
-#playBtn a{
+
+#playBtn a {
     font-family: "PacFont";
     text-align: center;
     font-size: 2rem;
     color: #FCCF00;
 }
 
-#playBtn a:hover{
+#playBtn a:hover {
     color: white;
 }
+
 .table {
     font-size: 1.2em;
     color: white;
@@ -65,11 +72,16 @@ h1{
 }
 
 #titlepage {
+    padding-top: 30px;
     justify-content: center;
     font-size: xx-small;
     display: flex;
     align-items: center;
     color: white;
+}
+
+#title {
+    font-size: 12em;
 }
 
 .fa-question-circle {
@@ -93,9 +105,17 @@ a :hover {
 #exampleModalLabel {
     color: #FCCF00;
 }
-.norm{
+
+.modalbg {
+    background-color: black;
+}
+
+.norm {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* JEUX */
 
 .gridG {
     display: flex;
